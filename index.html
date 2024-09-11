@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Form using JPDB</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header text-center">
+            <h2>Project Management Form</h2>
+        </div>
+        <form id="projform" method="get">
+            <div class="form-data">
+                <label>Project ID :</label>
+                <input type="number" id="projid" class="form-control" onchange="getProj()">
+            </div>
+            <div class="form-data">
+                <label>Project Name :</label>
+                <input type="text" id="projname" class="form-control">
+            </div>
+            <div class="form-data">
+                <label>Assigned To :</label>
+                <input type="text" id="projown" class="form-control">
+            </div>
+            <div class="form-data">
+                <label>Assignment Date :</label>
+                <input type="number" id="projdate" class="form-control">
+            </div>
+            <div class="form-data">
+                <label>Deadline :</label>
+                <input type="number" id="projend" class="form-control">
+            </div>
+            <br>
+            <div class="form-data text-center">
+                <button type="button" class="btn btn-lg btn-primary" id="save" onclick="saveData()" disabled>Save</button>
+                <button type="button" class="btn btn-lg btn-primary" id="update" onclick="changeData()" disabled>Update</button>
+                <button type="button" class="btn btn-lg btn-primary" id="reset" onclick="resetForm()" disabled>Reset</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
